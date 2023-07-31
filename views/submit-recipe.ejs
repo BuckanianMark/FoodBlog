@@ -1,0 +1,71 @@
+
+<div class="submit-page">
+    <h1 class="submit-heading">Submit Your Recipe</h1>
+    <p>Share your amazing recipes with dozens of people around the world</p>
+    <a href="/" class="back-btn">back</a>
+</div>
+
+<% if(infoSubmitObj != '') { %> 
+<div class="successfulmessage">
+   <%= infoSubmitObj %> 
+</div>
+<% } %>
+
+<% if(infoErrorsObj != '') { %> 
+    <div class="errormessage">
+       <%= infoErrorsObj %> 
+    </div>
+    <% } %>
+
+<div>
+    <form action="/submit-recipe" enctype="multipart/form-data" method="post" class="submitpageform">
+        <div class="formrow">
+            <div class="inputs">
+                <label for="email" class="formlabel">Email</label>
+                <input type="email" name="email" id="email" class="form-control">
+            </div>
+
+            <div class="inputs">
+                <label for="name" class="formlabel">Recipe Name</label>
+                <input type="text" name="name" id="name" class="form-control" required>
+            </div>
+
+            <div class="inputs" id="description">
+                <label for="description" class="formlabel">Recipe Description</label>
+                <input type="text" id="descriptioninput" class="form-control" name="description">
+            </div>
+            <div class="inputs">
+                <label for="ingredients" class="formlabel">Ingredients</label><br>
+                <small>Example - ice</small>
+                <div class="ingredientList">
+                    
+                <div class="ingredientdiv">
+                 
+                    <input type="text" name="ingredients" class="form-control">
+                </div>
+                </div>
+            </div>
+           <button class="submitpage-btn" id="addIngredientbtn">Ingridient</button>
+        </div>
+<div>
+    <label for="category">Select Category</label>
+    <select name="category" aria-label="Category">
+        <option selected=""></option>
+        <option value="Chinesse">Spanish</option>
+        <option value="American">American</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Indian">Chinesse</option>
+    </select>
+</div>
+<div class="choosefile">
+    <label for="image">Product Image
+    </label>
+    <input type="file" class="form-control" name="image" accept="image/*">
+</div>
+
+<div>
+    <button class="submit-recipe">Submit Recipe</button>
+</div>
+
+    </form>
+</div>

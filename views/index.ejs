@@ -1,0 +1,190 @@
+<div class="row">
+   
+    <div class="hero-text">
+        <h1>Huge Selection of Dishes and recipes</h1>
+        <p>Explore our huge selection of delicious recipe ideas and
+            desserts, delicious vegan and vegeterian dinner ideas, gorgeous pasta
+            recipes , quick bakes,family friendly meal and gluten free meals.
+        </p>
+        <div class="hero-links">
+            <a href="/explore-latest" class="explore-btn">Explore latest</a>
+            <a href="/explore-random" class="latest-btn">Show Random </a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="/img/hero-burger.png" width="407" alt="">
+    </div>
+</div>
+
+<div class="category-wrapper">
+
+<% if(categories != ''){ %>
+    <% categories.forEach(function(category, index){  %>
+
+    <a href="/categories/<%- category.name %>" class="category-image">
+         <div> <img src="/img/<%- category.image %>" width="140" alt="<%- category.name %>" loading="lazy"></div>  
+        <div class="tag"><%- category.name %></div>
+        </a>
+
+        <% }) %>
+<% } %>
+
+
+        <a href="/categories" class="category-image">
+            <div> <img src="/img/category3.jpg" width="140" alt="American Food" loading="lazy"></div>  
+           <div class="tag">View All</div>
+           </a>
+
+       
+
+</div>
+
+<!-- latest -->
+<div class="latestsection">
+    <div class="latestcontainer">
+        <h2>Latest Recipes</h2>
+
+
+        <a href="/explore-latest">View More</a>
+    </div>
+    <div class="latestrow">
+
+<% if(latest != ''){ %>
+
+    <% latest.forEach(function(recipe, index){ %>
+            <a href="/recipe/<%- recipe._id %>" class="latest-wrapper">
+            <div > <img src="/uploads/<%- recipe.image %>" width="200" alt="<%- recipe.name %>" loading="lazy"></div>  
+            <div class="tag"><%- recipe.name %></div>
+        </a>
+        <% }) %>
+        <% } else{ %>
+            <p>No items Found</p>
+                 <% } %>
+       
+
+      
+    </div>
+</div>
+
+<!-- American -->
+<div class="latestsection">
+    <div class="latestcontainer">
+        <h2>American Recipes</h2>
+
+
+        <a href="/explore-latest">View More</a>
+    </div>
+    <div class="latestrow">
+
+<% if(american != 'undefined' && american.length>0){ %>
+
+    <% american.forEach(function(recipe, index){ %>
+            <a href="/recipe/<%- recipe._id %>" class="latest-wrapper">
+            <div> <img src="/uploads/<%- recipe.image %>" width="200" alt="<%- recipe.name %>" loading="lazy"></div>  
+            <div class="tag"><%- recipe.name %></div>
+        </a>
+        <% }) %>
+        <% } else{ %>
+            <p>No items Found</p>
+                 <% } %>
+       
+
+      
+    </div>
+</div>
+
+<!-- mexican -->
+<div class="latestsection">
+    <div class="latestcontainer">
+        <h2>Mexican Recipes</h2>
+
+
+        <a href="/explore-latest">View More</a>
+    </div>
+    <div class="latestrow">
+
+<% if(mexican != ''){ %>
+
+    <% mexican.forEach(function(recipe, index){ %>
+            <a href="/recipe/<%- recipe._id %>" class="latest-wrapper">
+            <div> <img src="/uploads/<%- recipe.image %>" width="200" alt="<%- recipe.name %>" loading="lazy"></div>  
+            <div class="tag"><%- recipe.name %></div>
+        </a>
+        <% }) %>
+        <% } else{ %>
+       <p>No items Found</p>
+            <% } %>
+      
+    </div>
+</div>
+
+<!-- spanish -->
+<div class="latestsection">
+    <div class="latestcontainer">
+        <h2>Spanish Recipes</h2>
+
+
+        <a href="/explore-latest">View More</a>
+    </div>
+    <div class="latestrow">
+
+<% if(spanish != 'undefined' && american.length>0){ %>
+
+    <% spanish.forEach(function(recipe, index){ %>
+            <a href="/recipe/<%- recipe._id %>" class="latest-wrapper">
+            <div> <img src="/uploads/<%- recipe.image %>" width="200" alt="<%- recipe.name %>" loading="lazy"></div>  
+            <div class="tag"><%- recipe.name %></div>
+        </a>
+        <% }) %>
+        <% } else{ %>
+            <p>No items Found</p>
+                 <% } %>
+       
+
+      
+    </div>
+</div>
+<!-- indian -->
+<div class="latestsection">
+    <div class="latestcontainer">
+        <h2>Chinesse Recipes</h2>
+
+
+        <a href="/explore-latest">View More</a>
+    </div>
+    <div class="latestrow">
+
+<% if(chinesse != 'undefined' && chinesse.length>0){ %>
+
+    <% chinesse.forEach(function(recipe, index){ %>
+            <a href="/recipe/<%- recipe._id %>" class="latest-wrapper">
+            <div> <img src="/uploads/<%- recipe.image %>" width="200" alt="<%- recipe.name %>" loading="lazy"></div>  
+            <div class="tag"><%- recipe.name %></div>
+        </a>
+        <% }) %>
+        <% } else{ %>
+            <p>No items Found</p>
+                 <% } %>
+       
+
+      
+    </div>
+</div>
+
+
+
+<section class="submit-section">
+    <!-- submit section -->
+    <div class="publish-images">
+        <img src="/img/publishimage3.jpg" width="150" alt="">
+        <img src="/img/publishimage2.jpg" width="200" alt="">
+        <img src="/img/publishimage1.jpg" width="150" alt="">
+    </div>
+    
+    <h1>Publish Your Recipe for free</h1>
+<p>Publish your recipe to the magnitude for free</p>
+<div class="submit-btn">
+    <a href="/submit-recipe">Submit Recipe</a>
+</div>
+</section>
+
