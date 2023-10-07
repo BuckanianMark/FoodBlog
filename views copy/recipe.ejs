@@ -1,0 +1,33 @@
+<% if(recipe != null ){ %>
+    <div class="recipepagewrapper">
+        <span><%- recipe.name %></span>
+        <a href="/">Home/Explore More</a>
+    </div>
+    <div class="recipepagecontainer">
+
+    <div class="recipeimg">
+        <img src="/uploads/<%- recipe.image %>" alt="<%- recipe.name %>" loading="lazy">
+    </div>
+    <div class="recipedetails">
+        <div class="recipename"><%- recipe.name %></div>
+        <div class="recipecategory"> <i class="fa fa-tag"></i><%- recipe.category %></div>
+        
+        <div class="recipedescription"><%- recipe.description %></div>
+        
+    
+    <div class="recipe-ingredients">
+        <h4>Recipe Ingredients</h4>
+   <% for(let i =0;i<=recipe.ingredients.length;i++){ %>
+
+            <span class="ingredient"><i class="fa fa-highlighter-line"></i> <%- recipe.ingredients[i] %></span>
+            <% } %>
+          
+        </div>
+    </div>
+        
+    </div>
+</div>
+
+
+ 
+    <% } %>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 
+        <%= typeof title != 'undefined'? title:'Food Blog made with node' %>
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;500;600;700&family=Rubik:wght@300;600;800&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <div class="container-overall">
+
+        <header>
+            <nav>
+                <div class="logo">
+                    <img src="/img/logo.jpg" width="150" alt="">
+                <p>Food Blog</p>
+                
+                </div>
+                
+                    <i class="fa-solid fa-bars"></i>
+                
+                <div>
+                    <ul class="home-ul">
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li >
+                            <a href="/about-page">About</a>
+                        </li>
+                        <li>
+                            <a href="submit-recipe">Submit</a>
+                        </li>
+                        <!-- <li >
+                            <a href="/contact">Contact</a>
+                        </li> -->
+                    </ul>
+                </div>
+                
+                <div class="search">
+                    <form action="/search" method="post">
+                     <input type="search" name="searchTerm" placeholder="Search.."
+                     aria-label="Search">
+                    </form>
+                </div>
+            </nav>
+           <div class="responsivenav">
+            <a href="/">Home</a>
+            <a href="/about-page">About</a>
+            <a href="submit-recipe">Submit</a>
+            <!-- <a href="/contact">Contact</a> -->
+           </div>
+        </header>
+
+      <main>
+        <%- body -%>
+      </main>
+        
+<footer>
+    Built By  @Burky
+</footer>
+
+    </div>
+    
+<script src="/js/script.js"></script>
+
+</body>
+</html>

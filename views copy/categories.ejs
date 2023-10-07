@@ -1,0 +1,17 @@
+<h1 class="categoriespage-h1">Our categories page</h1>
+   <a href="/random-lastest" class="categories-redirect">explore more</a>
+
+
+<div class="categoriespage-wrapper">
+<% if(typeof categories != 'undefined' && categories.length > 0){ %>
+    <% categories.forEach(function(category, index){  %>
+
+    <a href="/categories/<%- category.name %>" class="category-image">
+         <div> <img src="/img/<%- category.image %>" width="140" alt="<%- category.name %>" loading="lazy"></div>  
+        <div class="tag"><%- category.name %></div>
+        </a>
+    
+        <% }) %>
+<% } %>
+</div>
+

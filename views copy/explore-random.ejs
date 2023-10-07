@@ -1,0 +1,19 @@
+<h1 class="h1-search"><%- recipe.name %></h1>
+<div class="latestsection">
+   
+    <div class="latestrow">
+
+<% if(recipe != ''){ %>
+
+   
+            <a href="/recipe/<%- recipe._id %>" class="latest-wrapper">
+            <div> <img src="/uploads/<%- recipe.image %>" width="200" alt="<%- recipe.name %>" loading="lazy"></div>  
+            <div class="tag"><%- recipe.name %></div>
+        </a>
+       
+        <% } else{ %>
+       <p>No items Found</p>
+            <% } %>
+      
+    </div>
+</div>
